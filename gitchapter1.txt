@@ -1,0 +1,57 @@
+A Git project is essentially a directory of files tracked by Git, a distributed version control system that records snapshots of your project over time. Unlike older VCS tools that store changes as file-by-file differences, Git stores complete snapshots of your project’s state at each commit. This makes it fast, reliable, and ideal for collaborative development.
+
+A Git project consists of three main components:
+
+Working Tree – The actual files you edit.
+
+Staging Area (Index) – A preparation zone where you mark changes to be committed.
+
+Git Directory (.git folder) – Stores the repository’s metadata and object database.
+
+Basic Workflow in a Git Project
+
+Modify files in the working tree.
+
+Stage changes using git add to move them into the staging area.
+
+Commit with git commit to save a snapshot in the Git directory.
+
+Creating a Git Project
+
+# Create a new project folder
+mkdir my-project && cd my-project
+
+# Initialize Git repository
+git init
+
+# Create a file and add content
+echo "# My Git Project" > README.md
+
+# Stage and commit changes
+git add README.md
+git commit -m "Initial commit"
+Copy
+This creates a local repository. You can later connect it to a remote repository (e.g., GitHub) for collaboration:
+
+git remote add origin https://github.com/user/my-project.git
+git push -u origin main
+Copy
+Key Features of a Git Project
+
+Distributed – Every developer has a full copy of the repository, enabling offline work.
+
+Branching & Merging – Create isolated branches for features or fixes, then merge them back.
+
+Integrity – Every file is checksummed with SHA-1, ensuring data integrity.
+
+History Tracking – View and revert to previous versions easily.
+
+Common Commands
+
+git status # View changes and staging status
+git log # View commit history
+git branch # List branches
+git checkout -b feature-x # Create and switch to a new branch
+git merge feature-x # Merge branch into current branch
+Copy
+A Git project is the foundation for modern software collaboration, enabling version tracking, experimentation, and teamwork without risking data loss.
